@@ -1,0 +1,23 @@
+{
+  "name": "smart-project-system",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/arfatbegum/smart-project-system#readme",
+  "bugs": {
+    "url": "https://github.com/arfatbegum/smart-project-system/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arfatbegum/smart-project-system.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "turbo": "^2.10.3"
+  }
+}
