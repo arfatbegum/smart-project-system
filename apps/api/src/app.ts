@@ -1,19 +1,20 @@
-import express from "express";
+import express, { Application, Request, Response } from "express";
 import cors from "cors";
-import helmet from "helmet";
 import morgan from "morgan";
 
-const app = express();
+const app: Application = express();
 
 app.use(cors());
-app.use(helmet());
-app.use(morgan("dev"));
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+app.use(morgan("dev"));
 
-app.get("/", (_req, res) => {
-  res.json({
+app.get("/", (req: Request, res: Response) => {
+  res.status(200).json({
     success: true,
-    message: "API is running 🚀",
+    message: "Smart Project & Task Collaboration API",
+    version: "1.0.0",
+    status: "Running",
   });
 });
 
