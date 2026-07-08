@@ -2,7 +2,7 @@ import dotenv from "dotenv";
 
 dotenv.config();
 
-const config = {
+export default {
   port: process.env.PORT || 5000,
 
   nodeEnv: process.env.NODE_ENV,
@@ -10,12 +10,11 @@ const config = {
   databaseUrl: process.env.DATABASE_URL,
 
   jwt: {
-    accessSecret: process.env.JWT_ACCESS_SECRET || "",
-    accessExpiresIn: process.env.JWT_ACCESS_EXPIRES_IN || "1d",
-
-    refreshSecret: process.env.JWT_REFRESH_SECRET || "",
-    refreshExpiresIn: process.env.JWT_REFRESH_EXPIRES_IN || "30d",
+    accessSecret: process.env.JWT_ACCESS_SECRET!,
+    refreshSecret: process.env.JWT_REFRESH_SECRET!,
+    accessExpiresIn: process.env.JWT_ACCESS_EXPIRES_IN!,
+    refreshExpiresIn: process.env.JWT_REFRESH_EXPIRES_IN!,
   },
-};
 
-export default config;
+  bcryptSaltRounds: Number(process.env.BCRYPT_SALT_ROUNDS),
+};
