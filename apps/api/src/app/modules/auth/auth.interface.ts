@@ -1,4 +1,4 @@
-export type TLoginUser = {
+export type ILoginUser = {
   email: string;
   password: string;
 };
@@ -8,3 +8,9 @@ export type TJwtPayload = {
   email: string;
   role: string;
 };
+
+export interface IRegisterUser {
+  name: string;
+  email: string;
+  password: string;
+}
